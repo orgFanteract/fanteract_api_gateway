@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  gateway:
+    container_name: fanteract-gateway
+    image: fanteract/gateway:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    restart: always
