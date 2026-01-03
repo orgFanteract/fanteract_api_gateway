@@ -7,5 +7,6 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - SPRING_PROFILES_ACTIVE=prod
+      EUREKA_INSTANCE_IP_ADDRESS: ${PRIVATE_IP}
+      SPRING_PROFILES_ACTIVE: prod
     restart: always
